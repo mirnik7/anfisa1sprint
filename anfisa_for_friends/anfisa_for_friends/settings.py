@@ -9,6 +9,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+    'cinema.apps.CinemaConfig',
     'homepage.apps.HomepageConfig',
     'ice_cream.apps.IceCreamConfig',
     'about.apps.AboutConfig',
@@ -55,7 +56,9 @@ WSGI_APPLICATION = 'anfisa_for_friends.wsgi.application'
 
 DATABASES = {
     'default': {
+        # К проекту по умолчанию подключена СУБД SQLite:  
         'ENGINE': 'django.db.backends.sqlite3',
+        # Файл с базой данных находится в одной папке с manage.py.
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
